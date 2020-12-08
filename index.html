@@ -10,8 +10,31 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-       
+        <header id="header">
+            <h1>Amazon Item Watcher</h1>   
+        </header>
+
+        <div id ="main" class="main">
+            <button id="login-btn">Login</button>
+            <button id="signUp-btn">Sign Up</button>
+
+            <form id='login-form' class = "hidden">
+                <input type="text" name="username" placeholder="Username" value="" />
+                <!-- <input type="password" name="password" placeholder="password" value="" /> -->
+                <input type="submit" value="Login" />
+            </form>
+
+            <form id='signUp-form' class = "hidden">
+                <input type="text" name="username" placeholder="Username" value="" />
+                <input type="text" name="first_name" placeholder="First Name" value="" />
+                <input type="text" name="last_name" placeholder="Last Name" value="" />
+                <!-- <input type="password" name="password" placeholder="password" value="" /> -->
+                <input type="submit" value="Sign Up" />
+            </form>
+
+        </div>
         
         <script defer src="./src/index.js"></script>
+        <!-- <script defer src="./src/app.js"></script> -->
     </body>
 </html>

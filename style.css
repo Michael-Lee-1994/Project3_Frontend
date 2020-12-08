@@ -1,0 +1,89 @@
+.hidden {
+visibility: hidden;
+}
+
+body {
+    background-color: rgb(2, 223, 223);
+    text-align: -webkit-center;
+}
+
+.user-welcome {
+    text-transform: capitalize;
+    background-color: white;
+    width: 400px;
+    outline: auto;
+}
+
+#header {
+    color: rgb(253, 23, 23);
+    background-color:rgb(201, 238, 128);
+    font-size: larger;
+    text-transform: capitalize;
+    outline: auto;
+    font-family: cursive;
+    font-variant: petite-caps;
+}
+
+nav#item-list-nav {
+    width: 600px;
+    /* margin: 20px; */
+}
+
+div#main {
+    background-color: rgb(201, 238, 128);
+    height: auto;
+}
+
+button#login-btn {
+    position: relative;
+    top: 55px;
+}
+
+button#signUp-btn {
+    position: relative;
+    top: 55px;
+}
+
+button#delete-btn {
+    margin: 10px 5px 10px 5px;
+}
+
+button#check-price-btn {
+    margin: 10px 5px 10px 5px;
+}
+
+form#login-form {
+    height: 50px;
+    position: relative;
+    top: 35px;
+}
+
+form#signUp-form {
+    height: 62px;
+    width: 151px;
+    top: -45px;
+    position: relative;
+}
+
+form#search-form {
+    height: 50px;
+    position: relative;
+    top: 15px;
+}
+
+#results-title {
+    text-decoration: underline;
+    border-style: inset;
+}
+
+#watch-list {
+    text-decoration: underline;
+    border-style: inset;
+    color: rgb(253, 23, 23);
+}
+
+#item {
+    font-family: cursive;
+    font-variant: petite-caps;
+    color: rgb(253, 23, 23);
+}
