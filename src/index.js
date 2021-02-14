@@ -3,7 +3,6 @@
     const userURL = "http://localhost:3000/users"
     const itemURL = "http://localhost:3000/watch_items"
     const joinURL = "http://localhost:3000/user_watch_items"
-    const API_KEY = ""
     const mainDiv = document.getElementById("main")
 
     //Creating one event listener that listens to the main Div
@@ -137,8 +136,10 @@
     const renderItemDiv = (item) => {
 
         let itemDiv = document.getElementById("item")
-        itemDiv.innerHTML = ""
-        // itemDiv.id = item.id
+        if(itemDiv.innerHTML != null) {
+            itemDiv.innerHTML = ""
+        }
+        itemDiv.id = item.id
 
         let h2 = document.getElementById("watch-list")
         h2.innerHTML = ""
@@ -350,12 +351,14 @@
         let ulObj = e.target.parentElement.parentElement.parentElement.children[1].children[1].children[0].children
         
         let options = {
-        method: "DELETE",
-        headers: {
-            "Content-Type": 'application/json',
-            "Accept": 'application/json'
+            method: "DELETE",
+            headers: {
+                "Content-Type": 'application/json',
+                "Accept": 'application/json'
+            }
         }
-        }
+        // console.dir(id)
+        // debugger
         fetch(`${itemURL}/${id}`, options)
         .then(res => res.json())
         .then(data =>  {
@@ -462,6 +465,7 @@
                 signUpForm.className = ""
             }
             else if(e.target.value === "Sign Up") {
+                //Refactor cause its a form, name
                 let newUser = e.target.parentElement[0].value
                 let newFirstName = e.target.parentElement[1].value
                 let newLastName = e.target.parentElement[2].value
